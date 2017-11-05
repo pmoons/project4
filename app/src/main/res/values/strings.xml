@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Project 4</string>
+    <string name="how_to_play">Select a sample from above to listen and guess what the artist is saying.
+        Punctuation and capitalization are ignored.  See how many replays it takes to guess the answer!</string>
+    <string name="sample_lets_go_title">Let\'s Go (feat. Big D &amp; Twista)</string>
+    <string name="sample_lets_go_artist">Trick Daddy</string>
+    <string name="sample_lets_go_answer">Got me swingin crysie and hennessy bottles
+in the club with my thug homies goin for the skrilla</string>
+    <string name="sample_crept_and_we_came_title">Crept and We Came</string>
+    <string name="sample_crept_and_we_came_artist">Bone Thugs-N-Harmony</string>
+    <string name="sample_crept_and_we_came_answer">Stalkin gat fools walking jack moves
+Ready ta pap you if we have to daily</string>
+    <string name="sample_commas_title">F*ck Up Some Commas</string>
+    <string name="sample_commas_artist">Future</string>
+    <string name="sample_commas_answer">Smoke the first 48 hours grind 22 and sleep 2 hours
+    Put 24s on the new Audi, white on white like baby powder</string>
+    <plurals name="item_sample_attempts">
+        <item quantity="one">%d attempt</item>
+        <item quantity="other">%d attempts</item>
+    </plurals>
+    <string name="item_sample_completed">Completed!</string>
+    <string name="item_sample_not_completed">Not Completed</string>
+</resources>
