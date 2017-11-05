@@ -2,6 +2,7 @@
     <string name="app_name">Project 4</string>
     <string name="how_to_play">Select a sample from above to listen and guess what the artist is saying.
         Punctuation and capitalization are ignored.  See how many replays it takes to guess the answer!</string>
+    <string name="check_answer">Check Answer</string>
     <string name="sample_lets_go_title">Let\'s Go (feat. Big D &amp; Twista)</string>
     <string name="sample_lets_go_artist">Trick Daddy</string>
     <string name="sample_lets_go_answer">Got me swingin crysie and hennessy bottles
