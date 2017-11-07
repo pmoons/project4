@@ -14,6 +14,7 @@ import android.widget.TextView;
 public class SampleDetailActivity extends Activity {
 
     private static final String EXTRA_SAMPLE = "me.petermooney.project4.sample";
+    private static final String KEY_RESULT_TEXT = "me.petermooney.project4.result_text";
 
     private Sample mSample;
     private SampleComparator mComparator;
@@ -38,6 +39,13 @@ public class SampleDetailActivity extends Activity {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        String resultText = mResultText.getText().toString();
+        savedInstanceState.putString(KEY_RESULT_TEXT, resultText);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_detail);
@@ -51,6 +59,11 @@ public class SampleDetailActivity extends Activity {
         mAttemptsText = findViewById(R.id.attempts);
         mCompletionStatus = findViewById(R.id.completion_status);
         mPlayCount = findViewById(R.id.play_count);
+
+        if (savedInstanceState != null) {
+            String resultText = savedInstanceState.getString(KEY_RESULT_TEXT, "");
+            mResultText.setText(resultText);
+        }
 
         Button checkAnswerBtn = findViewById(R.id.check_answer);
         TextView sampleTitleTextView = findViewById(R.id.sample_detail_title);
@@ -105,14 +118,6 @@ public class SampleDetailActivity extends Activity {
                 setIntentResult();
             }
         });
-
-//        TODO: Implement screen rotation state handling
-//        if (savedInstanceState != null) {
-//            boolean answerShown = savedInstanceState.getBoolean(KEY_ANSWER_SHOWN, false);
-//            setAnswerShownResult(answerShown);
-//            showAnswer(mAnswerIsTrue);
-//        }
-
     }
 
     private void setIntentResult() {
