@@ -3,6 +3,7 @@
     <string name="how_to_play">Select a sample from above to listen and guess what the artist is saying.
         Punctuation and capitalization are ignored.  See how many replays it takes to guess the answer!</string>
     <string name="check_answer">Check Answer</string>
+    <string name="results">You are %1$d%% accurate</string>
     <string name="sample_lets_go_title">Let\'s Go (feat. Big D &amp; Twista)</string>
     <string name="sample_lets_go_artist">Trick Daddy</string>
     <string name="sample_lets_go_answer">Got me swingin crysie and hennessy bottles
@@ -19,6 +20,11 @@ Ready ta pap you if we have to daily</string>
         <item quantity="one">%d attempt</item>
         <item quantity="other">%d attempts</item>
     </plurals>
+    <plurals name="sample_plays">
+        <item quantity="one">%d play</item>
+        <item quantity="other">%d plays</item>
+    </plurals>
+    <string name="sample_artist_play_count_separator">&#160;|&#160;</string>
     <string name="item_sample_completed">Completed!</string>
     <string name="item_sample_not_completed">Not Completed</string>
 </resources>

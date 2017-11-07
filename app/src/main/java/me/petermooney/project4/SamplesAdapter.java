@@ -15,9 +15,11 @@ public class SamplesAdapter extends ArrayAdapter<Sample> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Sample sample = getItem(position);
+        SampleFormatter formatter = new SampleFormatter(getContext(), sample);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_sample, parent, false);
+            convertView = LayoutInflater.from(getContext())
+                    .inflate(R.layout.item_sample, parent, false);
         }
 
         TextView sampleTitle = convertView.findViewById(R.id.item_sample_title);
@@ -27,26 +29,11 @@ public class SamplesAdapter extends ArrayAdapter<Sample> {
 
         sampleTitle.setText(sample.getTitle());
         sampleArtist.setText(sample.getArtist());
-        sampleAttempts.setText(getAttemptsText(sample));
-        sampleCompleted.setText(getCompletedText(sample));
+        sampleAttempts.setText(formatter.getAttemptsText());
+        sampleCompleted.setText(formatter.getCompletedText());
 
         return convertView;
     }
 
-    private String getAttemptsText(Sample sample) {
-        int attempts = sample.getAttempts();
-        return getContext()
-                .getResources()
-                .getQuantityString(R.plurals.item_sample_attempts, attempts, attempts);
-    }
 
-    private int getCompletedText(Sample sample) {
-        boolean completed = sample.getCompleted();
-
-        if (completed) {
-            return R.string.item_sample_completed;
-        } else {
-            return R.string.item_sample_not_completed;
-        }
-    }
 }
